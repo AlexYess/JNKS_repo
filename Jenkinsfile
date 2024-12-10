@@ -10,19 +10,19 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building the project...'
-                sh 'echo Build successful!'
+                bat 'echo Build successful!' // Используем bat вместо sh
             }
         }
         stage('Test') {
             steps {
                 echo 'Running tests...'
-                sh 'echo Tests passed!'
+                bat 'echo Tests passed!'
             }
         }
         stage('Deploy') {
             steps {
                 echo 'Deploying the project...'
-                sh 'echo Deployment successful!'
+                bat 'echo Deployment successful!'
             }
         }
     }
